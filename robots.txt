@@ -1,0 +1,30 @@
+# User-agent wise rules for Search Engines and AI/GEO Bots
+
+# 1. Google Bots (Standard Crawling & Indexing)
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+Allow: /
+
+# 2. AI & GEO/AEO Bots (Google, OpenAI, Anthropic, Perplexity, etc.)
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Bytespider
+User-agent: CCBot
+Allow: /
+
+# 3. Default Rule for all other Search Engines (Bing, DuckDuckGo, Yahoo, etc.)
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap URL
+Sitemap: https://www.incoinpay.ind.in/sitemap.xml
